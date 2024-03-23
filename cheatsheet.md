@@ -1,7 +1,8 @@
-# CHEATSHEET  
-<br /><br />
-## NETWORK ENUMERATION
-<br />
+# CHEATSHEET<br /><br />
+
+
+## NETWORK ENUMERATION<br />
+
 ### HOST DISCOVERY
 ```bash
 arp-scan -I <INTERFACE> --localnet --ignoredups
@@ -41,9 +42,9 @@ gobuster vhost -u <URL> -w <WORDLIST>
 --no-tls-validation, -k
 --timeout
 ```
-<br />
-<br />
-<br />
+<br /><br /><br />
+
+
 ## REVERSE SHELLS
 <br />
 ### BASH
