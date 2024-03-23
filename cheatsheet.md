@@ -108,19 +108,19 @@ stty rows <ROWS> columns <COLUMNS>
  
 ```bash
 # Python3
-python3 -m http.server 80
+python3 -m http.server <PORT>
 
 # Python2
-python -m SimpleHTTPServer 80
+python -m SimpleHTTPServer <PORT>
 
 # PHP
-php -S 0.0.0.0:80
+php -S 0.0.0.0:<PORT>
 ```
 
  #### SMB 
  
 ```bash
-smbserver.py shareName $(pwd) -smb2support
+smbserver.py <NAME> $(pwd) -smb2support
 ```
 
  #### FILE TRANSFER ( NETCAT - BASH ) 
