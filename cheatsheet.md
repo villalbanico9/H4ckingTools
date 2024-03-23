@@ -1,6 +1,5 @@
 # CHEATSHEET  
-<br />
-<br />
+<br /><br />
 ## NETWORK ENUMERATION
 <br />
 ### HOST DISCOVERY
